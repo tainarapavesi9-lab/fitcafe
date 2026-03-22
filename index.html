@@ -144,7 +144,7 @@
             font-family: 'Playfair Display', serif; 
         }
 
-        /* Premium Header */
+        /* Header Premium */
         .brand-header { 
             background-color: var(--brand-primary); 
             border-bottom: 1px solid rgba(255,255,255,0.1); 
@@ -179,7 +179,7 @@
             transform: translateY(0); 
         }
 
-        /* Buttons Custom Styles */
+        /* Botões */
         .btn-order {
             background-color: var(--brand-primary);
             color: white;
@@ -214,7 +214,7 @@
             color: var(--brand-primary);
         }
 
-        /* FAQ Styling */
+        /* FAQ */
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
         .faq-item.active .faq-answer { max-height: 500px; }
         .faq-item.active .chevron-icon { transform: rotate(180deg); color: var(--brand-primary); }
@@ -231,12 +231,12 @@
         }
 
         .logo-img {
-            height: 44px;
+            height: 48px;
             width: auto;
-            filter: brightness(0) invert(1); 
+            filter: brightness(0) invert(1);
         }
 
-        /* Modal Custom Styles */
+        /* Estilos dos Modais */
         .modal-body h2 { font-weight: bold; font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #370000; }
         .modal-body p { margin-bottom: 1rem; line-height: 1.6; }
         .modal-body h1 { font-weight: 800; font-size: 1.5rem; margin-bottom: 1rem; color: #370000; }
@@ -245,12 +245,12 @@
 </head>
 <body class="antialiased">
 
-    <!-- Navigation -->
+    <!-- Header -->
     <header class="brand-header py-4 px-6 md:px-12 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="images/logo.png" alt="FitCafe" class="logo-img" onerror="this.src='https://via.placeholder.com/150x50/370000/FFFFFF?text=FitCafe'">
-                <span class="text-white font-bold text-xl md:text-2xl tracking-tight uppercase">FITCAFE™</span>
+            <!-- Apenas o Logótipo -->
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="FitCafe Logo" class="logo-img" onerror="this.style.display='none'">
             </div>
             <a href="https://mwebora.com/11775/539/7/?" class="hidden md:block bg-white text-[#370000] px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-opacity-90 transition-all">
                 ORDER NOW →
@@ -267,7 +267,7 @@
                     
                     <div class="reveal active">
                         <div class="inline-flex items-center gap-2 bg-[#370000]/5 px-4 py-2 rounded-full mb-6 border border-[#370000]/10">
-                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#370000]">✨ The 2026 Metabolism Breakthrough</span>
+                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#370000]">✨ THE 2026 METABOLISM BREAKTHROUGH</span>
                         </div>
 
                         <h1 class="text-5xl md:text-6xl font-bold text-slate-900 leading-[1.1] mb-6">
@@ -311,7 +311,7 @@
                             <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#D4AF37]/10 rounded-full blur-3xl"></div>
                             <img src="images/fitcafe.png" alt="FitCafe Premium Ritual" class="w-full h-auto object-cover drop-shadow-[0_35px_35px_rgba(55,0,0,0.15)] transition-transform duration-500 hover:scale-[1.02]" onerror="this.src='https://via.placeholder.com/600x750/370000/FFFFFF?text=FitCafe+Box'">
                             
-                            <!-- Micro-proof logic integrated into Desktop view for balance -->
+                            <!-- Micro-proof logic -->
                             <div class="absolute -bottom-10 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-50 hidden md:block">
                                 <ul class="space-y-2">
                                     <li class="flex items-center gap-2 text-[11px] font-black text-slate-700 uppercase tracking-tighter">
@@ -332,7 +332,7 @@
             </div>
         </section>
 
-        <!-- Social Proof Stats -->
+        <!-- Stats Section -->
         <section class="bg-[#370000] py-20">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
@@ -365,7 +365,6 @@
                 </div>
 
                 <div class="space-y-4">
-                    <!-- Q1 -->
                     <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden">
                         <button class="w-full p-6 text-left flex justify-between items-center bg-white hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
                             <span class="font-bold text-slate-800">How does FitCafe help with weight management and cravings?</span>
@@ -377,7 +376,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Q2 -->
                     <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden">
                         <button class="w-full p-6 text-left flex justify-between items-center bg-white hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
                             <span class="font-bold text-slate-800">How long does it take to see results with FitCafe?</span>
@@ -389,7 +387,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Q3 -->
                     <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden">
                         <button class="w-full p-6 text-left flex justify-between items-center bg-white hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
                             <span class="font-bold text-slate-800">Is FitCafe safe and made with natural ingredients?</span>
@@ -401,7 +398,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Q4 -->
                     <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden">
                         <button class="w-full p-6 text-left flex justify-between items-center bg-white hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
                             <span class="font-bold text-slate-800">How do I use FitCafe for best results?</span>
@@ -413,7 +409,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Q5 -->
                     <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden">
                         <button class="w-full p-6 text-left flex justify-between items-center bg-white hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
                             <span class="font-bold text-slate-800">Do you offer fast shipping and a money-back guarantee in the USA?</span>
@@ -440,10 +435,9 @@
     <footer class="bg-[#1A0000] py-20 text-slate-400">
         <div class="container mx-auto px-6 text-center">
             <div class="flex flex-col items-center">
-                <!-- Footer Logo Lockup -->
-                <div class="flex items-center gap-4 mb-6 opacity-60 hover:opacity-100 transition-opacity">
-                    <img src="images/logo.png" alt="FitCafe" class="h-8 w-auto logo-img">
-                    <span class="text-white font-bold text-xl tracking-tight uppercase">FITCAFE™</span>
+                <!-- Apenas o Logótipo no Footer -->
+                <div class="flex items-center mb-8 opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="images/logo.png" alt="FitCafe" class="h-10 w-auto logo-img">
                 </div>
 
                 <div class="mb-8 space-y-1">
@@ -458,7 +452,7 @@
                     <button onclick="openModal('contact')" class="hover:text-white transition-colors">Contact Us</button>
                 </div>
 
-                <div class="max-w-3xl text-[9px] leading-relaxed opacity-40 space-y-4">
+                <div class="max-w-3xl text-[9px] leading-relaxed opacity-40 space-y-4 text-center">
                     <p>FDA Disclaimer: The statements made regarding these products have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease.</p>
                 </div>
 
@@ -481,7 +475,7 @@
                     </button>
                 </div>
                 <div id="modal-content" class="p-8 md:p-12 overflow-y-auto text-sm text-slate-600 modal-body">
-                    <!-- Content injected here -->
+                    <!-- Content -->
                 </div>
                 <div class="p-6 bg-slate-50 border-t border-slate-100 text-center">
                     <button onclick="closeModal()" class="bg-[#370000] text-white px-8 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg transition-transform active:scale-95">Close Window</button>
@@ -491,7 +485,6 @@
     </div>
 
     <script>
-        // Modal Logic
         const modal = document.getElementById('policy-modal');
         const modalTitle = document.getElementById('modal-title');
         const modalContent = document.getElementById('modal-content');
@@ -502,25 +495,14 @@
                 content: `
                     <h1>TERMS OF USE AND CONDITIONS OF SALE</h1>
                     <p><strong>OVERVIEW</strong></p>
-                    <p>IMPORTANT – PLEASE CAREFULLY READ AND UNDERSTAND THESE TERMS OF SALE ("TERMS" OR "AGREEMENT") BEFORE ACCESSING, USING, OR PLACING AN ORDER THROUGH OUR WEBSITE. THESE TERMS CONTAIN DISCLAIMERS OF WARRANTIES AND LIMITATIONS OF LIABILITIES. THESE TERMS FORM AN ESSENTIAL BASIS OF OUR AGREEMENT. PLEASE PRINT AND RETAIN A COPY OF THIS AGREEMENT FOR YOUR RECORDS.</p>
+                    <p>IMPORTANT – PLEASE CAREFULLY READ AND UNDERSTAND THESE TERMS OF SALE ("TERMS" OR "AGREEMENT") BEFORE ACCESSING, USING, OR PLACING AN ORDER THROUGH OUR WEBSITE. THESE TERMS CONTAIN DISCLAIMERS OF WARRANTIES AND LIMITATIONS OF LIABILITIES. THESE TERMS FORM AN ESSENTIAL BASIS OF OUR AGREEMENT.</p>
                     <p>Your use of tryfitcafe.com, including any sub-domains, affiliated websites, and mobile applications (collectively, the “Website”), which are owned and maintained by Aspen Brass LLC (“Aspen Brass LLC,” “we,” “our,” “us”), are governed by the policies, terms, and conditions set forth below.</p>
-                    <p>By accessing, using, or placing an order over the Website, you agree to these terms. If you do not agree to these terms in their entirety, you are not authorized to use the Website.</p>
                     <h2>1. WEBSITE USE</h2>
-                    <p>By using the Website and agreeing to these Terms, you represent that you are at least the age of majority in your state or province of residence. If you use the Website, you affirm that you have the legal capacity to enter into a binding contract with us.</p>
-                    <h2>3. GENERAL CONDITIONS AND WEBSITE USER CONDUCT RESTRICTIONS</h2>
-                    <p>All aspects of our Website are protected by U.S. and international copyright, trademark, and other intellectual property laws. You do not acquire any ownership or other rights by downloading or using the Website or any material on it.</p>
-                    <h2>4. PRODUCTS SOLD FOR PERSONAL USE ONLY</h2>
-                    <p>You agree that any products or services purchased through the Website are for your personal, non-commercial use only. Resale, redistribution, or export of our products is prohibited.</p>
+                    <p>By using the Website and agreeing to these Terms, you represent that you are at least the age of majority in your state or province of residence.</p>
                     <h2>5. NO MEDICAL ADVICE</h2>
                     <p>Information on the Website is for general informational purposes and is not medical advice. The statements made on this Website have not been evaluated by the FDA.</p>
                     <h2>9. SHIPPING</h2>
-                    <p>We ship within the U.S. via USPS. Orders typically ship within 2–3 business days and arrive within 8 business days. It is your responsibility to provide an accurate shipping address.</p>
-                    <h2>14. DISCLAIMER OF LIABILITIES</h2>
-                    <p>To the fullest extent permitted by law, Aspen Brass LLC shall not be liable for any indirect, incidental, or consequential damages. Maximum liability is limited to $500.00.</p>
-                    <h2>15. DISPUTE RESOLUTION BY MANDATORY BINDING ARBITRATION</h2>
-                    <p>You agree to resolve disputes via binding arbitration administered by the AAA. You waive the right to participate in class actions or jury trials.</p>
-                    <h2>26. QUESTIONS OR ADDITIONAL INFORMATION</h2>
-                    <p>Aspen Brass LLC<br>Email: care@tryfitcafe.com<br>Tel: 844-240-3279</p>
+                    <p>We ship within the U.S. via USPS. Orders typically ship within 2–3 business days and arrive within 8 business days.</p>
                 `
             },
             privacy: {
@@ -528,37 +510,26 @@
                 content: `
                     <h1>Privacy Policy</h1>
                     <p>Effective Date: July 18th, 2024<br>Last updated: 11 January, 2024</p>
-                    <p>At Fit Cafe we are committed to safeguarding and preserving the privacy of our visitors. This Privacy Policy explains what happens to any personal data that you provide to us, or that we collect from you whilst you visit our site.</p>
+                    <p>At Fit Cafe we are committed to safeguarding and preserving the privacy of our visitors. This Privacy Policy explains what happens to any personal data that you provide to us.</p>
                     <h2>Information We Collect</h2>
-                    <p>In running and maintaining our website we may collect and process the following data about you:</p>
                     <ul>
-                        <li>Information about your use of our site including details of your visits.</li>
-                        <li>Information provided voluntarily by you (e.g., during purchase).</li>
+                        <li>Information about your use of our site.</li>
+                        <li>Information provided voluntarily by you during purchase.</li>
                         <li>Communication data.</li>
                     </ul>
-                    <h2>Use of Cookies</h2>
-                    <p>Cookies provide information regarding the computer used by a visitor. We may use cookies where appropriate to gather information about your computer in order to assist us in improving our website. You can adjust the settings on your computer to decline any cookies if you wish.</p>
-                    <h2>Use of Your Information</h2>
-                    <p>We use the information that we collect from you to provide our services to you. If you purchase a product, an order confirmation will be sent from care@tryfitcafe.com.</p>
-                    <h2>Storing Your Personal Data</h2>
-                    <p>We do our utmost to ensure that all reasonable steps are taken to make sure that your data is treated stored securely. Sending information via the internet is entirely at your own risk.</p>
-                    <p>For questions, or concerns please contact care@tryfitcafe.com</p>
                 `
             },
             refund: {
                 title: "Refund Policy & Guarantee",
                 content: `
-                    <h1>120-Day Money Back Guarantee</h1>
-                    <p>We are confident that you will love your purchase. If for any reason you're not completely satisfied, we offer a 120-day money-back guarantee.</p>
-                    <p>To return your product for a full refund, simply contact our Customer Support team via phone or email to request a Return Merchandise Authorization (RMA). Once you have your RMA, return the product to us, and after it has been received and restocked, we will process your refund.</p>
+                    <h1>180-Day Money Back Guarantee</h1>
+                    <p>We are confident that you will love your purchase. If for any reason you're not completely satisfied, we offer a 180-day money-back guarantee.</p>
                     <h2>How it works:</h2>
                     <ul>
                         <li>Contact our Customer Support team to request an RMA.</li>
                         <li>Ship the product back to us.</li>
                         <li>Once we receive and restock the item, we will issue your refund.</li>
                     </ul>
-                    <p>Your satisfaction is our priority, and we're here to help.</p>
-                    <p><strong>Contact Information:</strong><br>Email: care@tryfitcafe.com<br>Phone: 844-240-3279</p>
                 `
             },
             contact: {
@@ -567,13 +538,9 @@
                     <h1>Contact Us</h1>
                     <p>Our team is here to assist you with any inquiries, concerns, or feedback you may have.</p>
                     <h2>Customer Support:</h2>
-                    <p>If you have questions about our products or services, need assistance with an order, or require any other help, our customer support team is available to assist you. You can reach us via:</p>
                     <p><strong>Phone:</strong> 844-240-3279<br>
                     <strong>Email:</strong> care@tryfitcafe.com<br>
                     <strong>Business Hours:</strong> 24 Hours / 7 Days a Week</p>
-                    <h2>Feedback:</h2>
-                    <p>We value your feedback and appreciate your thoughts on how we can improve our products and services. Feel free to send us your comments or suggestions via email at care@tryfitcafe.com.</p>
-                    <p>Thank you for choosing Fit Cafe!</p>
                 `
             }
         };
