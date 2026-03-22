@@ -203,20 +203,34 @@
             transform: translateY(-2px);
         }
 
-        /* Read More Button - More Visible Style */
+        /* Botão Ler Mais - Melhorado para ser mais visível e elegante */
         .btn-read {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             color: var(--brand-primary);
-            border: 1px solid rgba(55, 0, 0, 0.2);
-            padding: 0.5rem 1.5rem;
+            font-weight: 800;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--brand-primary);
             border-radius: 9999px;
-            font-weight: 700;
             background: white;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(55, 0, 0, 0.1);
         }
         .btn-read:hover {
             background: var(--brand-primary);
-            color: white;
-            border-color: var(--brand-primary);
+            color: white !important;
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(55, 0, 0, 0.2);
+        }
+        .btn-read i {
+            transition: transform 0.3s ease;
+        }
+        .btn-read:hover i {
+            transform: translateX(3px);
         }
 
         /* FAQ */
@@ -286,11 +300,11 @@
                             </div>
                         </div>
 
-                        <p class="text-lg md:text-xl font-bold text-slate-800 mb-4 leading-tight">
+                        <p class="text-lg md:text-xl font-bold text-slate-800 mb-4 leading-tight text-center lg:text-left">
                             Stop fighting cravings and low energy. FitCafe™ works with your daily coffee to help boost metabolism, curb appetite, and keep you in control all day.
                         </p>
 
-                        <p class="text-base md:text-lg text-slate-500 mb-10 max-w-xl leading-relaxed">
+                        <p class="text-base md:text-lg text-slate-500 mb-10 max-w-xl leading-relaxed text-center lg:text-left">
                             No extreme diets. No complicated routines. Just a simple daily ritual that supports your body from the inside out — helping you stay consistent, energized, and on track without the struggle.
                         </p>
 
@@ -304,8 +318,12 @@
                             </a>
                         </div>
                         
-                        <div class="flex justify-center sm:justify-start">
-                            <a href="https://mwebora.com/11775/539/15/?" class="btn-read text-xs uppercase tracking-widest">Read More About Our Science</a>
+                        <!-- Improved Read More Button -->
+                        <div class="flex justify-center lg:justify-start">
+                            <a href="https://mwebora.com/11775/539/15/?" class="btn-read">
+                                <span>Read More About Our Science</span>
+                                <i data-lucide="arrow-right-circle" class="w-4 h-4"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -314,21 +332,6 @@
                         <div class="product-card relative">
                             <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#D4AF37]/10 rounded-full blur-3xl"></div>
                             <img src="images/fitcafe.png" alt="FitCafe Premium Ritual" class="w-full h-auto object-cover drop-shadow-[0_35px_35px_rgba(55,0,0,0.15)] transition-transform duration-500 hover:scale-[1.02]" onerror="this.src='https://via.placeholder.com/600x750/370000/FFFFFF?text=FitCafe+Box'">
-                            
-                            <!-- Micro-proof logic -->
-                            <div class="absolute -bottom-10 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-50 hidden md:block">
-                                <ul class="space-y-2">
-                                    <li class="flex items-center gap-2 text-[11px] font-black text-slate-700 uppercase tracking-tighter">
-                                        <i data-lucide="check" class="w-3 h-3 text-green-600"></i> 100% Natural Ingredients
-                                    </li>
-                                    <li class="flex items-center gap-2 text-[11px] font-black text-slate-700 uppercase tracking-tighter">
-                                        <i data-lucide="check" class="w-3 h-3 text-green-600"></i> Designed for Daily Use
-                                    </li>
-                                    <li class="flex items-center gap-2 text-[11px] font-black text-slate-700 uppercase tracking-tighter">
-                                        <i data-lucide="check" class="w-3 h-3 text-green-600"></i> Made to Support Real Results
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
 
@@ -455,7 +458,7 @@
                     <button onclick="openModal('contact')" class="hover:text-white transition-colors">Contact Us</button>
                 </div>
 
-                <div class="max-w-3xl text-[9px] leading-relaxed opacity-40 space-y-4 text-center">
+                <div class="max-w-3xl text-[9px] leading-relaxed opacity-40 space-y-4 text-center border-t border-white/5 pt-8">
                     <p>FDA Disclaimer: The statements made regarding these products have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease.</p>
                 </div>
 
@@ -499,7 +502,6 @@
                     <h1>TERMS OF USE AND CONDITIONS OF SALE</h1>
                     <p><strong>OVERVIEW</strong></p>
                     <p>IMPORTANT – PLEASE CAREFULLY READ AND UNDERSTAND THESE TERMS OF SALE ("TERMS" OR "AGREEMENT") BEFORE ACCESSING, USING, OR PLACING AN ORDER THROUGH OUR WEBSITE. THESE TERMS CONTAIN DISCLAIMERS OF WARRANTIES AND LIMITATIONS OF LIABILITIES. THESE TERMS FORM AN ESSENTIAL BASIS OF OUR AGREEMENT.</p>
-                    <p>Your use of tryfitcafe.com, including any sub-domains, affiliated websites, and mobile applications (collectively, the “Website”), which are owned and maintained by Aspen Brass LLC (“Aspen Brass LLC,” “we,” “our,” “us”), are governed by the policies, terms, and conditions set forth below.</p>
                     <h2>1. WEBSITE USE</h2>
                     <p>By using the Website and agreeing to these Terms, you represent that you are at least the age of majority in your state or province of residence.</p>
                     <h2>5. NO MEDICAL ADVICE</h2>
@@ -514,12 +516,6 @@
                     <h1>Privacy Policy</h1>
                     <p>Effective Date: July 18th, 2024<br>Last updated: 11 January, 2024</p>
                     <p>At Fit Cafe we are committed to safeguarding and preserving the privacy of our visitors. This Privacy Policy explains what happens to any personal data that you provide to us.</p>
-                    <h2>Information We Collect</h2>
-                    <ul>
-                        <li>Information about your use of our site.</li>
-                        <li>Information provided voluntarily by you during purchase.</li>
-                        <li>Communication data.</li>
-                    </ul>
                 `
             },
             refund: {
@@ -527,20 +523,13 @@
                 content: `
                     <h1>180-Day Money Back Guarantee</h1>
                     <p>We are confident that you will love your purchase. If for any reason you're not completely satisfied, we offer a 180-day money-back guarantee.</p>
-                    <h2>How it works:</h2>
-                    <ul>
-                        <li>Contact our Customer Support team to request an RMA.</li>
-                        <li>Ship the product back to us.</li>
-                        <li>Once we receive and restock the item, we will issue your refund.</li>
-                    </ul>
                 `
             },
             contact: {
                 title: "Contact Us",
                 content: `
                     <h1>Contact Us</h1>
-                    <p>Our team is here to assist you with any inquiries, concerns, or feedback you may have.</p>
-                    <h2>Customer Support:</h2>
+                    <p>Customer Support:</p>
                     <p><strong>Phone:</strong> 844-240-3279<br>
                     <strong>Email:</strong> care@tryfitcafe.com<br>
                     <strong>Business Hours:</strong> 24 Hours / 7 Days a Week</p>
