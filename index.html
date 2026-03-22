@@ -203,15 +203,20 @@
             transform: translateY(-2px);
         }
 
+        /* Read More Button - More Visible Style */
         .btn-read {
-            color: #64748b;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            font-weight: 600;
-            transition: color 0.3s ease;
+            color: var(--brand-primary);
+            border: 1px solid rgba(55, 0, 0, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            background: white;
+            transition: all 0.3s ease;
         }
         .btn-read:hover {
-            color: var(--brand-primary);
+            background: var(--brand-primary);
+            color: white;
+            border-color: var(--brand-primary);
         }
 
         /* FAQ */
@@ -231,7 +236,7 @@
         }
 
         .logo-img {
-            height: 48px;
+            height: 38px;
             width: auto;
             filter: brightness(0) invert(1);
         }
@@ -248,7 +253,6 @@
     <!-- Header -->
     <header class="brand-header py-4 px-6 md:px-12 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <!-- Apenas o Logótipo -->
             <div class="flex items-center">
                 <img src="images/logo.png" alt="FitCafe Logo" class="logo-img" onerror="this.style.display='none'">
             </div>
@@ -274,6 +278,14 @@
                             Take Back Control of Your Body — <span class="gradient-text italic">Starting This Morning</span>
                         </h1>
 
+                        <!-- Mobile Product Image: Positioned right after Title for Mobile -->
+                        <div class="lg:hidden mb-8 flex justify-center">
+                            <div class="relative w-full max-w-sm">
+                                <div class="absolute -inset-4 bg-[#370000]/5 rounded-full blur-3xl"></div>
+                                <img src="images/fitcafe.png" alt="FitCafe Premium Product" class="relative w-full h-auto drop-shadow-2xl rounded-3xl" onerror="this.src='https://via.placeholder.com/600x800/370000/FFFFFF?text=FitCafe+Product'">
+                            </div>
+                        </div>
+
                         <p class="text-lg md:text-xl font-bold text-slate-800 mb-4 leading-tight">
                             Stop fighting cravings and low energy. FitCafe™ works with your daily coffee to help boost metabolism, curb appetite, and keep you in control all day.
                         </p>
@@ -281,14 +293,6 @@
                         <p class="text-base md:text-lg text-slate-500 mb-10 max-w-xl leading-relaxed">
                             No extreme diets. No complicated routines. Just a simple daily ritual that supports your body from the inside out — helping you stay consistent, energized, and on track without the struggle.
                         </p>
-
-                        <!-- Mobile Product Image -->
-                        <div class="lg:hidden mb-12 flex justify-center">
-                            <div class="relative w-full max-w-sm">
-                                <div class="absolute -inset-4 bg-[#370000]/5 rounded-full blur-3xl"></div>
-                                <img src="images/fitcafe.png" alt="FitCafe Premium Product" class="relative w-full h-auto drop-shadow-2xl rounded-3xl" onerror="this.src='https://via.placeholder.com/600x800/370000/FFFFFF?text=FitCafe+Product'">
-                            </div>
-                        </div>
 
                         <!-- CTA Group -->
                         <div class="flex flex-col sm:flex-row items-center gap-5 mb-12">
@@ -301,7 +305,7 @@
                         </div>
                         
                         <div class="flex justify-center sm:justify-start">
-                            <a href="https://mwebora.com/11775/539/15/?" class="btn-read text-sm uppercase tracking-widest">Read More About Our Science</a>
+                            <a href="https://mwebora.com/11775/539/15/?" class="btn-read text-xs uppercase tracking-widest">Read More About Our Science</a>
                         </div>
                     </div>
 
@@ -435,7 +439,6 @@
     <footer class="bg-[#1A0000] py-20 text-slate-400">
         <div class="container mx-auto px-6 text-center">
             <div class="flex flex-col items-center">
-                <!-- Apenas o Logótipo no Footer -->
                 <div class="flex items-center mb-8 opacity-60 hover:opacity-100 transition-opacity">
                     <img src="images/logo.png" alt="FitCafe" class="h-10 w-auto logo-img">
                 </div>
